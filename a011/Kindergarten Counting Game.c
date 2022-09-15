@@ -1,6 +1,6 @@
-#include <string.h>
+#include <string.h> //æä¾›strlenå‡½æ•¸
 #include <stdio.h>
-#include <ctype.h> //´£¨Ñisalpha¨ç¼Æ
+#include <ctype.h> //æä¾›isalphaå‡½æ•¸
 
 
 int main()
@@ -8,11 +8,11 @@ int main()
     int num = 0;
     char input[1000] = {};
 
-    //scanfÅª¨ìªÅ®æ§Yµ²§ô¡A¦]¦¹¨Ï¥Îgets¡Agets¬OÅª¨ì{ENTER}µ²§ô
+    //scanfè®€åˆ°ç©ºæ ¼å³çµæŸï¼Œå› æ­¤ä½¿ç”¨getsï¼Œgetsæ˜¯è®€åˆ°{ENTER}çµæŸ
 
-    while(gets(input) != NULL) //¦]¬°input¥i¯à¤£¥u¤@¦æ¡A¦]¦¹gets()¦bwhile()¸Ì­±¡A¥i¥H¤ÏÂĞÅª¿é¤J­È
+    while(gets(input) != NULL) //å› ç‚ºinputå¯èƒ½ä¸åªä¸€è¡Œï¼Œå› æ­¤gets()åœ¨while()è£¡é¢ï¼Œå¯ä»¥åè¦†è®€è¼¸å…¥å€¼
     {
-       for(int i=0; i<strlen(input); i++) //strlen¡AÅª¨úinputªºªø«×
+       for(int i=0; i<strlen(input); i++) //strlenï¼Œè®€å–inputçš„é•·åº¦
         {
             if(isalpha(input[i]) && !isalpha(input[i+1]))
             {
